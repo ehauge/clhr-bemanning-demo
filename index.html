@@ -61,6 +61,74 @@
   .mfilt{display:flex;align-items:center;justify-content:space-between;padding:8px 14px;border-bottom:1px solid var(--border);background:#FBFBFA}
   .mfilt label{display:inline-flex;gap:7px;align-items:center;font-size:12px;cursor:pointer}
   .blocked{padding:8px 14px;font-size:11.5px;color:var(--sec);border-top:1px dashed var(--border);background:#FCFCFB}
+  /* clickable agent cards */
+  .agent.clickable{cursor:pointer;transition:box-shadow .12s,transform .12s}
+  .agent.clickable:hover{box-shadow:0 3px 12px rgba(0,0,0,.10);transform:translateY(-1px)}
+  .agent .go{font-size:11px;font-weight:600;color:var(--blue);margin-top:6px;display:inline-flex;align-items:center;gap:4px}
+  /* full-screen drill-down page overlay */
+  .pageovl{position:fixed;inset:0;background:rgba(32,31,30,.5);display:none;align-items:flex-start;justify-content:center;z-index:60;overflow:auto;padding:26px 16px}
+  .pageovl.on{display:flex}
+  .page{background:var(--bg);border-radius:14px;width:1080px;max-width:97vw;box-shadow:0 18px 60px rgba(0,0,0,.3);overflow:hidden}
+  .page .ph{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:18px 22px;background:var(--white);border-bottom:1px solid var(--border)}
+  .page .ph h2{margin:0 0 3px;font-size:19px;color:var(--dark)}
+  .page .ph .psub{font-size:12.5px;color:var(--sec);max-width:720px;line-height:1.45}
+  .page .ph .pr{display:flex;align-items:center;gap:8px;flex-shrink:0}
+  .pbibadge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#B5810B;background:var(--amberbg);border:1px solid #F0D37A;border-radius:999px;padding:3px 10px}
+  .mockbadge{font-size:10.5px;font-weight:700;color:var(--sec);background:#EDEBE9;border-radius:999px;padding:3px 9px}
+  .pclose{border:1px solid var(--border);background:var(--white);border-radius:8px;width:34px;height:32px;cursor:pointer;font-size:16px;line-height:1;color:var(--sec)}
+  .pclose:hover{background:var(--tint)}
+  .pbody{padding:18px 22px 24px}
+  /* BI dashboard */
+  .bikpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
+  .bikpi{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:13px 15px}
+  .bikpi .n{font-size:23px;font-weight:700;color:var(--dark);line-height:1}
+  .bikpi .l{font-size:11.5px;color:var(--sec);margin-top:6px}
+  .bikpi .d{font-size:11px;font-weight:700;margin-top:5px}
+  .bikpi .d.up{color:var(--red)} .bikpi .d.down{color:var(--green)}
+  .bigrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .tile{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+  .tile h3{margin:0 0 12px;font-size:13px;color:var(--dark);display:flex;align-items:center;justify-content:space-between}
+  .tile h3 .mini{font-size:10.5px;font-weight:600;color:var(--sec)}
+  /* grouped vertical bars */
+  .vbars{display:flex;align-items:flex-end;gap:14px;height:150px;padding-top:6px}
+  .vbg{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%}
+  .vbpair{flex:1;display:flex;align-items:flex-end;gap:4px;width:100%;justify-content:center}
+  .vb{width:16px;border-radius:4px 4px 0 0;min-height:2px}
+  .vb.plan{background:#C7E0F4} .vb.fakt{background:var(--blue)}
+  .vbx{font-size:10.5px;color:var(--sec)}
+  .vbsingle{width:60%;max-width:34px;border-radius:4px 4px 0 0;background:var(--blue);min-height:2px}
+  .vbsingle.amb{background:var(--amber)} .vbsingle.cy{background:var(--cyan)}
+  .lgnd{display:flex;gap:14px;font-size:11px;color:var(--sec);margin-top:8px}
+  .lgnd span{display:inline-flex;align-items:center;gap:5px}
+  .lgnd i{width:11px;height:11px;border-radius:3px;display:inline-block}
+  /* horizontal bars (area cost) */
+  .hbar{margin:9px 0}
+  .hbar .hl{display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px}
+  .hbar .ht{height:14px;border-radius:7px;background:#EDEBE9;overflow:hidden}
+  .hbar .hf{height:100%;border-radius:7px;background:linear-gradient(90deg,#0078D4,#2B9AF3)}
+  .pnote{font-size:11px;color:var(--sec);margin-top:14px;line-height:1.5;border-top:1px dashed var(--border);padding-top:11px}
+  .chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+  .chip{font-size:11px;border:1px solid var(--border);border-radius:999px;padding:3px 11px;background:var(--white);color:var(--sec)}
+  .chip.on{background:var(--tint);border-color:var(--blue);color:var(--blue-d);font-weight:600}
+  /* vikar pool cards */
+  .vikgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
+  .vikcard{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:7px}
+  .vikcard .vt{display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .vikcard .vn{font-weight:600;color:var(--dark);font-size:14px}
+  .vikcard .vq{font-size:11.5px;color:var(--sec)}
+  .vikcard .vmeta{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--body)}
+  .vikcard .vmeta b{color:var(--dark)}
+  .vstat{font-size:10.5px;font-weight:700;padding:2px 9px;border-radius:999px}
+  .vstat.av{background:var(--greenbg);color:var(--green)} .vstat.sh{background:var(--tint);color:var(--blue)} .vstat.bz{background:#EDEBE9;color:var(--sec)}
+  .vsend{align-self:flex-start;border:1px solid var(--blue);background:var(--blue);color:#fff;border-radius:7px;padding:5px 12px;font:inherit;font-size:12px;font-weight:600;cursor:pointer}
+  .vsend:hover{background:var(--blue-d)} .vsend.sent{background:var(--greenbg);color:var(--green);border-color:#9AD79A;cursor:default}
+  /* hviletid rows */
+  .hvtbl{width:100%;border-collapse:collapse;font-size:12.5px}
+  .hvtbl th{text-align:left;font-size:11px;color:var(--sec);font-weight:600;padding:7px 10px;border-bottom:1px solid var(--border);background:#FBFBFA}
+  .hvtbl td{padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+  .hvtbl .hn{font-weight:600;color:var(--dark)}
+  .sev{font-size:10.5px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+  .sev.hoy{background:var(--redbg);color:var(--red)} .sev.mid{background:var(--amberbg);color:#8A6100}
   .mclose{float:right;cursor:pointer;color:var(--sec);font-size:18px;line-height:1;border:0;background:none}
   .cell-short{background:var(--redbg);color:var(--red);font-weight:700}
   .cell-syk{background:var(--amberbg);color:#8A6100;font-weight:600}
@@ -206,8 +274,38 @@
   </div>
 </div>
 
+<div class="pageovl" id="pgHvile">
+  <div class="page">
+    <div class="ph">
+      <div><h2 id="hvH"></h2><div class="psub" id="hvS"></div></div>
+      <div class="pr"><span class="mockbadge" id="hvMock"></span><button class="pclose" data-close="pgHvile">✕</button></div>
+    </div>
+    <div class="pbody" id="hvBody"></div>
+  </div>
+</div>
+
+<div class="pageovl" id="pgVikar">
+  <div class="page">
+    <div class="ph">
+      <div><h2 id="vkH"></h2><div class="psub" id="vkS"></div></div>
+      <div class="pr"><span class="mockbadge" id="vkMock"></span><button class="pclose" data-close="pgVikar">✕</button></div>
+    </div>
+    <div class="pbody" id="vkBody"></div>
+  </div>
+</div>
+
+<div class="pageovl" id="pgKost">
+  <div class="page">
+    <div class="ph">
+      <div><h2 id="koH"></h2><div class="psub" id="koS"></div></div>
+      <div class="pr"><span class="pbibadge" id="koPbi"></span><span class="mockbadge" id="koMock"></span><button class="pclose" data-close="pgKost">✕</button></div>
+    </div>
+    <div class="pbody" id="koBody"></div>
+  </div>
+</div>
+
 <script>
-const DATA = {"ship": "Color Hybrid", "hoysesong": "20.06–20.08", "positions": [{"role": "Butikksjef", "stillingsnr": "8316", "sample": {"name": "Haakon Nes", "nr": "90477"}, "reqQual": "butikksjef"}, {"role": "Salgsleder Taxfree", "stillingsnr": "8502", "sample": {"name": "Haakon Vik", "nr": "90055"}, "reqQual": "salgsleder"}, {"role": "Salgsleder P&C", "stillingsnr": "8504", "sample": {"name": "Ida Berg", "nr": "98183"}, "reqQual": "salgsleder"}, {"role": "Salgsleder CS", "stillingsnr": "8506", "sample": {"name": "Kari Dahl", "nr": "98927"}, "reqQual": "salgsleder"}, {"role": "Butikk Taxfree", "stillingsnr": "8301", "sample": {"name": "Tiril Tangen", "nr": "92481"}, "reqQual": "butikk"}, {"role": "Butikk Taxfree", "stillingsnr": "8303", "sample": {"name": "Magnus Foss", "nr": "97424"}, "reqQual": "butikk"}, {"role": "Butikk Taxfree", "stillingsnr": "8419", "sample": {"name": "Frida Sand", "nr": "92276"}, "reqQual": "butikk"}, {"role": "Butikk Taxfree", "stillingsnr": "8317", "sample": {"name": "Bjorn Roen", "nr": "97164"}, "reqQual": "butikk"}, {"role": "Butikk Taxfree", "stillingsnr": "8503", "sample": {"name": "Nina Opsahl", "nr": "98761"}, "reqQual": "butikk"}, {"role": "Butikk Deli", "stillingsnr": "8305", "sample": {"name": "Vegard Kvam", "nr": "95472"}, "reqQual": "butikk"}, {"role": "Butikk P&C", "stillingsnr": "8311", "sample": {"name": "Daniel Rud", "nr": "95255"}, "reqQual": "butikk"}, {"role": "Butikk CS", "stillingsnr": "8315", "sample": {"name": "Hedda Aune", "nr": "95291"}, "reqQual": "butikk"}, {"role": "Butikk CS", "stillingsnr": "8313", "sample": {"name": "Vilde Roen", "nr": "95598"}, "reqQual": "butikk"}, {"role": "Butikk CS", "stillingsnr": "8508", "sample": {"name": "Gustav Holt", "nr": "97904"}, "reqQual": "butikk"}, {"role": "Proviant", "stillingsnr": "8307", "sample": {"name": "Marius Ness", "nr": "93482"}, "reqQual": "butikk"}, {"role": "Proviant", "stillingsnr": "8309", "sample": {"name": "Maria Rud", "nr": "96929"}, "reqQual": "butikk"}, {"role": "Butikk Taxfree 50%", "stillingsnr": "0.5", "sample": {"name": "Ruben Fjell", "nr": "90221"}, "reqQual": "butikk"}, {"role": "Butikk Taxfree 50%", "stillingsnr": "0.5", "sample": {"name": "Gustav Lunde", "nr": "91061"}, "reqQual": "butikk"}, {"role": "Butikk Taxfree 50%", "stillingsnr": "0.5", "sample": {"name": "Malin Holt", "nr": "97700"}, "reqQual": "butikk"}, {"role": "Butikk Parfyme 50%", "stillingsnr": "0.5", "sample": {"name": "Ronja Aune", "nr": "95031"}, "reqQual": "butikk"}, {"role": "Butikk Color Shop 50%", "stillingsnr": "0.5", "sample": {"name": "Kristian Sand", "nr": "91893"}, "reqQual": "butikk"}], "pool": [{"name": "Randi Roen", "nr": "93301"}, {"name": "Kari Dahl", "nr": "98927"}, {"name": "Guro Haugen", "nr": "96760"}, {"name": "Haakon Nes", "nr": "90477"}, {"name": "Haakon Vik", "nr": "90055"}, {"name": "Tiril Tangen", "nr": "92481"}, {"name": "Emma Sand", "nr": "90493"}, {"name": "Kari Gran", "nr": "96813"}, {"name": "Ida Berg", "nr": "98183"}, {"name": "Magnus Foss", "nr": "97424"}, {"name": "Julie Sand", "nr": "97944"}, {"name": "Filip Nes", "nr": "93756"}, {"name": "Hedda Aune", "nr": "95291"}, {"name": "Live Lia", "nr": "96564"}, {"name": "Frida Sand", "nr": "92276"}, {"name": "Ronja Ruud", "nr": "95430"}, {"name": "Haakon Myhre", "nr": "92377"}, {"name": "Marius Ness", "nr": "93482"}, {"name": "Aksel Roen", "nr": "98830"}, {"name": "Leah Stordal", "nr": "94968"}, {"name": "Magnus Ryen", "nr": "94588"}, {"name": "Fredrik Lund", "nr": "94979"}, {"name": "Halvard Lunde", "nr": "96510"}, {"name": "Simen Holm", "nr": "93524"}, {"name": "Agnes Bakke", "nr": "98372"}, {"name": "Kristian Dahl", "nr": "94642"}, {"name": "Nina Opsahl", "nr": "98761"}, {"name": "Noah Holm", "nr": "90916"}, {"name": "Oline Lund", "nr": "98627"}, {"name": "Knut Andrè E. Throndsen", "nr": "2418"}, {"name": "Magnus Lie", "nr": "92192"}, {"name": "Linnea Aune", "nr": "97751"}, {"name": "Vilde Roen", "nr": "95598"}, {"name": "Vegard Kvam", "nr": "95472"}, {"name": "Malin Holt", "nr": "97700"}, {"name": "Selma Myhre", "nr": "90067"}, {"name": "Sofie Myhre", "nr": "91710"}, {"name": "Nina Sæter", "nr": "96424"}, {"name": "Trygve Lunde", "nr": "92959"}, {"name": "Gustav Holt", "nr": "97904"}], "trappe": {"1.tur": {"Butikk": [[0, 21], [101, 21], [201, 21], [301, 21], [401, 21], [501, 21], [601, 21], [701, 21], [801, 22], [901, 23], [1001, 24], [1101, 26], [1201, 27], [1301, 29], [1401, 30], [1501, 31], [1601, 31], [1701, 31], [1801, 31], [1901, 31], [2000, 31], ["HS", 33]], "Restaurant": [[0, 17], [101, 17], [201, 17], [301, 17], [401, 17], [501, 18], [601, 18], [701, 19], [801, 20], [901, 21], [1001, 23], [1101, 23], [1201, 23], [1301, 23], [1401, 23], [1501, 23], [1601, 23], [1701, 23], [1801, 23], [1901, 23], [2000, 23], ["HS", 29]], "Bysse": [[0, 20], [101, 20], [201, 20], [301, 20], [401, 20], [501, 20], [601, 20], [701, 20], [801, 21], [901, 21], [1001, 22], [1101, 22], [1201, 23], [1301, 23], [1401, 23], [1501, 23], [1601, 24], [1701, 24], [1801, 24], [1901, 24], [2000, 24], ["HS", 28]], "Husøk": [[0, 7], [101, 7], [201, 7], [301, 7], [401, 7], [501, 7], [601, 7], [701, 7], [801, 7], [901, 7], [1001, 7], [1101, 7], [1201, 7], [1301, 7], [1401, 7], [1501, 7], [1601, 7], [1701, 7], [1801, 7], [1901, 7], [2000, 7], ["HS", 8]]}, "2.tur": {"Butikk": [[0, 16], [101, 16], [201, 16], [301, 16], [401, 16], [501, 16], [601, 16], [701, 20], [801, 22], [901, 23], [1001, 24], [1101, 25], [1201, 26], [1301, 27], [1401, 27], [1501, 28], [1601, 28], [1701, 28], [1801, 28], [1901, 28], [2000, 28], ["HS", 31]], "Restaurant": [[0, 14], [101, 14], [201, 14], [301, 15], [401, 16], [501, 18], [601, 20], [701, 22], [801, 22], [901, 22], [1001, 23], [1101, 23], [1201, 23], [1301, 23], [1401, 23], [1501, 23], [1601, 23], [1701, 23], [1801, 23], [1901, 23], [2000, 23], ["HS", 26]], "Bysse": [[0, 19], [101, 19], [201, 19], [301, 19], [401, 19], [501, 19], [601, 19], [701, 20], [801, 20], [901, 20], [1001, 21], [1101, 21], [1201, 22], [1301, 22], [1401, 22], [1501, 22], [1601, 23], [1701, 23], [1801, 23], [1901, 23], [2000, 23], ["HS", 27]], "Husøk": [[0, 7], [101, 7], [201, 7], [301, 7], [401, 7], [501, 7], [601, 7], [701, 7], [801, 7], [901, 7], [1001, 7], [1101, 7], [1201, 7], [1301, 7], [1401, 7], [1501, 7], [1601, 7], [1701, 7], [1801, 7], [1901, 7], [2000, 7], ["HS", 8]]}}, "week": [{"d": "Man", "dato": "13.10", "pax1": 420, "pax2": 380}, {"d": "Tir", "dato": "14.10", "pax1": 510, "pax2": 460}, {"d": "Ons", "dato": "15.10", "pax1": 640, "pax2": 600}, {"d": "Tor", "dato": "16.10", "pax1": 880, "pax2": 820}, {"d": "Fre", "dato": "17.10", "pax1": 1320, "pax2": 1180}, {"d": "Lør", "dato": "18.10", "pax1": 1680, "pax2": 1540}, {"d": "Søn", "dato": "19.10", "pax1": 1150, "pax2": 1020}], "absence": {"syk": [["Butikk Taxfree", "8419", 4], ["Butikk CS", "8315", 5], ["Proviant", "8307", 6]], "perm": [["Butikk Taxfree", "8303", 2]]}, "candidates": [{"name": "Randi Roen", "quals": ["butikksjef"]}, {"name": "Kari Dahl", "quals": ["butikksjef", "salgsleder"]}, {"name": "Guro Haugen", "quals": ["butikk", "extra"]}, {"name": "Haakon Nes", "quals": ["butikksjef"]}, {"name": "Haakon Vik", "quals": ["butikksjef", "salgsleder"]}, {"name": "Tiril Tangen", "quals": ["butikk", "extra"]}, {"name": "Emma Sand", "quals": ["butikk", "extra"]}, {"name": "Kari Gran", "quals": ["butikksjef", "salgsleder"]}, {"name": "Ida Berg", "quals": ["salgsleder"]}, {"name": "Magnus Foss", "quals": ["butikk", "extra"]}, {"name": "Julie Sand", "quals": ["butikk", "extra"]}, {"name": "Filip Nes", "quals": ["salgsleder"]}, {"name": "Hedda Aune", "quals": ["butikk", "extra"]}, {"name": "Live Lia", "quals": ["butikk", "extra"]}, {"name": "Frida Sand", "quals": ["butikk", "extra"]}, {"name": "Ronja Ruud", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Haakon Myhre", "quals": ["salgsleder"]}, {"name": "Marius Ness", "quals": ["butikk", "extra", "salgsleder"]}, {"name": "Aksel Roen", "quals": ["butikk", "extra"]}, {"name": "Leah Stordal", "quals": ["butikk", "extra", "salgsleder"]}, {"name": "Magnus Ryen", "quals": ["butikk", "extra", "salgsleder"]}, {"name": "Fredrik Lund", "quals": ["butikk", "extra"]}, {"name": "Halvard Lunde", "quals": ["butikk", "extra"]}, {"name": "Simen Holm", "quals": ["butikk", "extra", "salgsleder"]}, {"name": "Agnes Bakke", "quals": ["butikk", "extra"]}, {"name": "Kristian Dahl", "quals": ["butikk", "extra"]}, {"name": "Nina Opsahl", "quals": ["butikk", "extra", "salgsleder"]}, {"name": "Noah Holm", "quals": ["butikk", "extra"]}, {"name": "Oline Lund", "quals": ["butikk", "extra"]}, {"name": "Knut Andrè E. Throndsen", "quals": ["butikk", "extra", "salgsleder"]}, {"name": "Magnus Lie", "quals": ["butikk", "extra"]}, {"name": "Linnea Aune", "quals": ["butikk", "extra"]}, {"name": "Vilde Roen", "quals": ["butikk", "extra", "salgsleder"]}, {"name": "Vegard Kvam", "quals": ["butikk", "extra"]}, {"name": "Malin Holt", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Selma Myhre", "quals": ["butikk", "extra"]}, {"name": "Sofie Myhre", "quals": ["butikk", "extra"]}, {"name": "Nina Sæter", "quals": ["butikksjef"]}, {"name": "Trygve Lunde", "quals": ["butikk", "extra"]}, {"name": "Gustav Holt", "quals": ["butikk", "extra"]}, {"name": "Isak Viken", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Hanne Foss", "quals": ["butikk", "extra"]}, {"name": "Emma Lia", "quals": ["butikk", "extra"]}, {"name": "Odd Myhre", "quals": ["butikk", "extra"]}, {"name": "Amalie Bratland", "quals": ["butikk", "extra"]}, {"name": "Selma Ek", "quals": ["butikk", "extra"]}, {"name": "Ruben Fjell", "quals": ["butikk", "extra"]}, {"name": "Maja Viken", "quals": ["butikk", "extra"]}, {"name": "Pia Ness", "quals": ["butikk", "extra"]}, {"name": "Camilla Holt", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Oliver Solvang", "quals": ["butikk", "extra"]}, {"name": "Mia Dahl", "quals": ["butikk", "extra"]}, {"name": "Nina Dahl", "quals": ["butikk", "extra"]}, {"name": "Signe Sæter", "quals": ["butikk", "extra"]}, {"name": "Hanne Fjell", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Camilla Strand", "quals": ["butikk", "extra"]}, {"name": "Kristian Sand", "quals": ["butikk", "extra"]}, {"name": "Gustav Lunde", "quals": ["butikk", "extra"]}, {"name": "Sindre Ryen", "quals": ["butikk", "extra"]}, {"name": "Kari Rud", "quals": ["butikk", "extra"]}, {"name": "Tobias Opsahl", "quals": ["butikk", "extra"]}, {"name": "Jakob Foss", "quals": ["butikk", "extra"]}, {"name": "Elin Lunde", "quals": ["butikk", "extra"]}, {"name": "Eirik Lie", "quals": ["butikk", "extra"]}, {"name": "Ronja Aune", "quals": ["butikk", "extra"]}, {"name": "Jakob Sand", "quals": ["butikk", "extra"]}, {"name": "Gustav Rognlien", "quals": ["butikk", "extra"]}, {"name": "Johannes Lund", "quals": ["butikk", "extra"]}, {"name": "Camilla Ryen", "quals": ["butikk", "extra"]}, {"name": "Mikkel Lie", "quals": ["butikk", "extra"]}, {"name": "Bjorn Roen", "quals": ["butikk", "extra"]}, {"name": "Noah Berg", "quals": ["butikk", "extra"]}, {"name": "Siri Eide", "quals": ["extra"]}, {"name": "Mia Myhre", "quals": ["butikk", "extra"]}, {"name": "Mia Sæter", "quals": ["butikk", "extra"]}, {"name": "Vilde Lunde", "quals": ["butikk", "extra"]}, {"name": "Siri Lund", "quals": ["butikk", "extra"]}, {"name": "Randi Mork", "quals": ["extra"]}, {"name": "Simen Strand", "quals": ["butikk", "extra"]}, {"name": "Pia Vik", "quals": ["extra"]}, {"name": "Sara Ryen", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Sofie Sæter", "quals": ["butikk", "extra"]}, {"name": "Daniel Fjell", "quals": ["extra"]}, {"name": "Bjorn Kvam", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Simen Eide", "quals": ["butikk", "extra"]}, {"name": "Vilde Ruud", "quals": ["butikk", "extra"]}, {"name": "Camilla Haugen", "quals": ["butikk", "extra"]}, {"name": "Sverre Ek", "quals": ["extra"]}, {"name": "Emma Gran", "quals": ["butikk", "extra"]}, {"name": "Helene Rud", "quals": ["butikk", "extra"]}, {"name": "Signe Aune", "quals": ["butikk", "extra"]}, {"name": "Oliver Gran", "quals": ["butikk", "extra"]}, {"name": "Amalie Fossum", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Kristian Holt", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Jonas Rud", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Maria Rud", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Marius Ryen", "quals": ["butikk", "extra"]}, {"name": "Karl Henrik B. Nylèn", "quals": ["butikk", "extra"]}, {"name": "Mina Dahl", "quals": ["butikk", "extra"]}, {"name": "Ida Bakke", "quals": ["butikk", "extra"]}, {"name": "Hanne Vik", "quals": ["butikksjef", "extra"]}, {"name": "Ane Tangen", "quals": ["butikk", "extra"]}, {"name": "Vegard Sæter", "quals": ["butikk", "extra"]}, {"name": "Ane Sand", "quals": ["butikk", "extra"]}, {"name": "Kristian Rognlien", "quals": ["butikk", "extra"]}, {"name": "Henrik Bakke", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Arne Holm", "quals": ["butikksjef"]}, {"name": "Camilla Vik", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Oda Lunde", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Daniel Nes", "quals": ["butikk", "extra"]}, {"name": "Ruben Foss", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Hedda Sæter", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Oda Dahl", "quals": ["butikk", "extra"]}, {"name": "Filip Austad", "quals": ["extra"]}, {"name": "Johannes Roen", "quals": ["butikk", "extra"]}, {"name": "Bjorn Vik", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Mikkel Fjell", "quals": ["butikk", "extra"]}, {"name": "Sofie Rud", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Helene Solvang", "quals": ["butikk", "extra"]}, {"name": "Frida Tangen", "quals": ["butikk", "extra"]}, {"name": "Sara Austad", "quals": ["butikk", "extra"]}, {"name": "Ruben Gran", "quals": ["butikk", "extra"]}, {"name": "Theo Sand", "quals": ["butikk", "extra"]}, {"name": "Vegard Fjell", "quals": ["butikk", "extra"]}, {"name": "Jan Berg", "quals": ["butikk", "extra"]}, {"name": "Guro Opsahl", "quals": ["extra"]}, {"name": "Tiril Bakke", "quals": ["butikk", "extra"]}, {"name": "Oda Rud", "quals": ["butikk", "extra"]}, {"name": "Henrik Heia", "quals": ["extra"]}, {"name": "Daniel Viken", "quals": ["butikk", "extra"]}, {"name": "Ronja Ek", "quals": ["butikk", "extra"]}, {"name": "Adrian Mork", "quals": ["butikk", "extra"]}, {"name": "Simen Opsahl", "quals": ["butikk", "extra"]}, {"name": "Filip Fjell", "quals": ["butikk", "extra"]}, {"name": "Hedda Mork", "quals": ["extra"]}, {"name": "Bjorn Aune", "quals": ["butikk", "extra"]}, {"name": "Live Rud", "quals": ["butikk", "extra"]}, {"name": "Kari Austad", "quals": ["butikk", "extra"]}, {"name": "Fredrik Aune", "quals": ["butikk", "extra"]}, {"name": "Sindre Aune", "quals": ["butikk", "extra"]}, {"name": "Noah Holt", "quals": ["butikk", "extra"]}, {"name": "Nina Myhre", "quals": ["butikk", "extra"]}, {"name": "Oda Fjell", "quals": ["butikk", "extra"]}], "competency": {"Randi Roen": ["butikksjef"], "Kari Dahl": ["butikksjef", "salgsleder"], "Guro Haugen": ["butikk", "extra"], "Haakon Nes": ["butikksjef"], "Haakon Vik": ["butikksjef", "salgsleder"], "Tiril Tangen": ["butikk", "extra"], "Emma Sand": ["butikk", "extra"], "Kari Gran": ["butikksjef", "salgsleder"], "Ida Berg": ["salgsleder"], "Magnus Foss": ["butikk", "extra"], "Julie Sand": ["butikk", "extra"], "Filip Nes": ["salgsleder"], "Hedda Aune": ["butikk", "extra"], "Live Lia": ["butikk", "extra"], "Frida Sand": ["butikk", "extra"], "Ronja Ruud": ["butikk", "butikksjef", "extra"], "Haakon Myhre": ["salgsleder"], "Marius Ness": ["butikk", "extra", "salgsleder"], "Aksel Roen": ["butikk", "extra"], "Leah Stordal": ["butikk", "extra", "salgsleder"], "Magnus Ryen": ["butikk", "extra", "salgsleder"], "Fredrik Lund": ["butikk", "extra"], "Halvard Lunde": ["butikk", "extra"], "Simen Holm": ["butikk", "extra", "salgsleder"], "Agnes Bakke": ["butikk", "extra"], "Kristian Dahl": ["butikk", "extra"], "Nina Opsahl": ["butikk", "extra", "salgsleder"], "Noah Holm": ["butikk", "extra"], "Oline Lund": ["butikk", "extra"], "Knut Andrè E. Throndsen": ["butikk", "extra", "salgsleder"], "Magnus Lie": ["butikk", "extra"], "Linnea Aune": ["butikk", "extra"], "Vilde Roen": ["butikk", "extra", "salgsleder"], "Vegard Kvam": ["butikk", "extra"], "Malin Holt": ["butikk", "butikksjef", "extra"], "Selma Myhre": ["butikk", "extra"], "Sofie Myhre": ["butikk", "extra"], "Nina Sæter": ["butikksjef"], "Trygve Lunde": ["butikk", "extra"], "Gustav Holt": ["butikk", "extra"], "Isak Viken": ["butikk", "butikksjef", "extra"], "Hanne Foss": ["butikk", "extra"], "Emma Lia": ["butikk", "extra"], "Odd Myhre": ["butikk", "extra"], "Amalie Bratland": ["butikk", "extra"], "Selma Ek": ["butikk", "extra"], "Ruben Fjell": ["butikk", "extra"], "Maja Viken": ["butikk", "extra"], "Pia Ness": ["butikk", "extra"], "Camilla Holt": ["butikk", "butikksjef", "extra"], "Oliver Solvang": ["butikk", "extra"], "Mia Dahl": ["butikk", "extra"], "Nina Dahl": ["butikk", "extra"], "Signe Sæter": ["butikk", "extra"], "Hanne Fjell": ["butikk", "butikksjef", "extra"], "Camilla Strand": ["butikk", "extra"], "Kristian Sand": ["butikk", "extra"], "Gustav Lunde": ["butikk", "extra"], "Sindre Ryen": ["butikk", "extra"], "Kari Rud": ["butikk", "extra"], "Tobias Opsahl": ["butikk", "extra"], "Jakob Foss": ["butikk", "extra"], "Elin Lunde": ["butikk", "extra"], "Eirik Lie": ["butikk", "extra"], "Ronja Aune": ["butikk", "extra"], "Jakob Sand": ["butikk", "extra"], "Gustav Rognlien": ["butikk", "extra"], "Johannes Lund": ["butikk", "extra"], "Camilla Ryen": ["butikk", "extra"], "Mikkel Lie": ["butikk", "extra"], "Bjorn Roen": ["butikk", "extra"], "Noah Berg": ["butikk", "extra"], "Siri Eide": ["extra"], "Mia Myhre": ["butikk", "extra"], "Mia Sæter": ["butikk", "extra"], "Vilde Lunde": ["butikk", "extra"], "Siri Lund": ["butikk", "extra"], "Randi Mork": ["extra"], "Simen Strand": ["butikk", "extra"], "Pia Vik": ["extra"], "Sara Ryen": ["butikk", "butikksjef", "extra"], "Sofie Sæter": ["butikk", "extra"], "Daniel Fjell": ["extra"], "Bjorn Kvam": ["butikk", "butikksjef", "extra"], "Simen Eide": ["butikk", "extra"], "Vilde Ruud": ["butikk", "extra"], "Camilla Haugen": ["butikk", "extra"], "Sverre Ek": ["extra"], "Emma Gran": ["butikk", "extra"], "Helene Rud": ["butikk", "extra"], "Signe Aune": ["butikk", "extra"], "Oliver Gran": ["butikk", "extra"], "Amalie Fossum": ["butikk", "butikksjef", "extra"], "Kristian Holt": ["butikk", "butikksjef", "extra"], "Jonas Rud": ["butikk", "butikksjef", "extra"], "Maria Rud": ["butikk", "butikksjef", "extra"], "Marius Ryen": ["butikk", "extra"], "Karl Henrik B. Nylèn": ["butikk", "extra"], "Mina Dahl": ["butikk", "extra"], "Ida Bakke": ["butikk", "extra"], "Hanne Vik": ["butikksjef", "extra"], "Ane Tangen": ["butikk", "extra"], "Vegard Sæter": ["butikk", "extra"], "Ane Sand": ["butikk", "extra"], "Kristian Rognlien": ["butikk", "extra"], "Henrik Bakke": ["butikk", "butikksjef", "extra"], "Arne Holm": ["butikksjef"], "Camilla Vik": ["butikk", "butikksjef", "extra"], "Oda Lunde": ["butikk", "butikksjef", "extra"], "Daniel Nes": ["butikk", "extra"], "Ruben Foss": ["butikk", "butikksjef", "extra"], "Hedda Sæter": ["butikk", "butikksjef", "extra"], "Oda Dahl": ["butikk", "extra"], "Filip Austad": ["extra"], "Johannes Roen": ["butikk", "extra"], "Bjorn Vik": ["butikk", "butikksjef", "extra"], "Mikkel Fjell": ["butikk", "extra"], "Sofie Rud": ["butikk", "butikksjef", "extra"], "Helene Solvang": ["butikk", "extra"], "Frida Tangen": ["butikk", "extra"], "Sara Austad": ["butikk", "extra"], "Ruben Gran": ["butikk", "extra"], "Theo Sand": ["butikk", "extra"], "Vegard Fjell": ["butikk", "extra"], "Jan Berg": ["butikk", "extra"], "Guro Opsahl": ["extra"], "Tiril Bakke": ["butikk", "extra"], "Oda Rud": ["butikk", "extra"], "Henrik Heia": ["extra"], "Daniel Viken": ["butikk", "extra"], "Ronja Ek": ["butikk", "extra"], "Adrian Mork": ["butikk", "extra"], "Simen Opsahl": ["butikk", "extra"], "Filip Fjell": ["butikk", "extra"], "Hedda Mork": ["extra"], "Bjorn Aune": ["butikk", "extra"], "Live Rud": ["butikk", "extra"], "Kari Austad": ["butikk", "extra"], "Fredrik Aune": ["butikk", "extra"], "Sindre Aune": ["butikk", "extra"], "Noah Holt": ["butikk", "extra"], "Nina Myhre": ["butikk", "extra"], "Oda Fjell": ["butikk", "extra"]}, "dayrate": {"leder": 4200, "salgsleder": 3600, "fast": 3100, "deltid": 1700, "vikar": 2600}};
+const DATA = {"ship": "Color Hybrid", "hoysesong": "20.06–20.08", "positions": [{"role": "Butikksjef", "stillingsnr": "8316", "sample": {"name": "Haakon Nes", "nr": "90477"}, "reqQual": "butikksjef"}, {"role": "Salgsleder Taxfree", "stillingsnr": "8502", "sample": {"name": "Haakon Vik", "nr": "90055"}, "reqQual": "salgsleder"}, {"role": "Salgsleder P&C", "stillingsnr": "8504", "sample": {"name": "Ida Berg", "nr": "98183"}, "reqQual": "salgsleder"}, {"role": "Salgsleder CS", "stillingsnr": "8506", "sample": {"name": "Kari Dahl", "nr": "98927"}, "reqQual": "salgsleder"}, {"role": "Butikk Taxfree", "stillingsnr": "8301", "sample": {"name": "Tiril Tangen", "nr": "92481"}, "reqQual": "butikk"}, {"role": "Butikk Taxfree", "stillingsnr": "8303", "sample": {"name": "Magnus Foss", "nr": "97424"}, "reqQual": "butikk"}, {"role": "Butikk Taxfree", "stillingsnr": "8419", "sample": {"name": "Frida Sand", "nr": "92276"}, "reqQual": "butikk"}, {"role": "Butikk Taxfree", "stillingsnr": "8317", "sample": {"name": "Bjorn Roen", "nr": "97164"}, "reqQual": "butikk"}, {"role": "Butikk Taxfree", "stillingsnr": "8503", "sample": {"name": "Nina Opsahl", "nr": "98761"}, "reqQual": "butikk"}, {"role": "Butikk Deli", "stillingsnr": "8305", "sample": {"name": "Vegard Kvam", "nr": "95472"}, "reqQual": "butikk"}, {"role": "Butikk P&C", "stillingsnr": "8311", "sample": {"name": "Daniel Rud", "nr": "95255"}, "reqQual": "butikk"}, {"role": "Butikk CS", "stillingsnr": "8315", "sample": {"name": "Hedda Aune", "nr": "95291"}, "reqQual": "butikk"}, {"role": "Butikk CS", "stillingsnr": "8313", "sample": {"name": "Vilde Roen", "nr": "95598"}, "reqQual": "butikk"}, {"role": "Butikk CS", "stillingsnr": "8508", "sample": {"name": "Gustav Holt", "nr": "97904"}, "reqQual": "butikk"}, {"role": "Proviant", "stillingsnr": "8307", "sample": {"name": "Marius Ness", "nr": "93482"}, "reqQual": "butikk"}, {"role": "Proviant", "stillingsnr": "8309", "sample": {"name": "Maria Rud", "nr": "96929"}, "reqQual": "butikk"}, {"role": "Butikk Taxfree 50%", "stillingsnr": "0.5", "sample": {"name": "Ruben Fjell", "nr": "90221"}, "reqQual": "butikk"}, {"role": "Butikk Taxfree 50%", "stillingsnr": "0.5", "sample": {"name": "Gustav Lunde", "nr": "91061"}, "reqQual": "butikk"}, {"role": "Butikk Taxfree 50%", "stillingsnr": "0.5", "sample": {"name": "Malin Holt", "nr": "97700"}, "reqQual": "butikk"}, {"role": "Butikk Parfyme 50%", "stillingsnr": "0.5", "sample": {"name": "Ronja Aune", "nr": "95031"}, "reqQual": "butikk"}, {"role": "Butikk Color Shop 50%", "stillingsnr": "0.5", "sample": {"name": "Kristian Sand", "nr": "91893"}, "reqQual": "butikk"}], "pool": [{"name": "Randi Roen", "nr": "93301"}, {"name": "Kari Dahl", "nr": "98927"}, {"name": "Guro Haugen", "nr": "96760"}, {"name": "Haakon Nes", "nr": "90477"}, {"name": "Haakon Vik", "nr": "90055"}, {"name": "Tiril Tangen", "nr": "92481"}, {"name": "Emma Sand", "nr": "90493"}, {"name": "Kari Gran", "nr": "96813"}, {"name": "Ida Berg", "nr": "98183"}, {"name": "Magnus Foss", "nr": "97424"}, {"name": "Julie Sand", "nr": "97944"}, {"name": "Filip Nes", "nr": "93756"}, {"name": "Hedda Aune", "nr": "95291"}, {"name": "Live Lia", "nr": "96564"}, {"name": "Frida Sand", "nr": "92276"}, {"name": "Ronja Ruud", "nr": "95430"}, {"name": "Haakon Myhre", "nr": "92377"}, {"name": "Marius Ness", "nr": "93482"}, {"name": "Aksel Roen", "nr": "98830"}, {"name": "Leah Stordal", "nr": "94968"}, {"name": "Magnus Ryen", "nr": "94588"}, {"name": "Fredrik Lund", "nr": "94979"}, {"name": "Halvard Lunde", "nr": "96510"}, {"name": "Simen Holm", "nr": "93524"}, {"name": "Agnes Bakke", "nr": "98372"}, {"name": "Kristian Dahl", "nr": "94642"}, {"name": "Nina Opsahl", "nr": "98761"}, {"name": "Noah Holm", "nr": "90916"}, {"name": "Oline Lund", "nr": "98627"}, {"name": "Knut Andrè E. Throndsen", "nr": "2418"}, {"name": "Magnus Lie", "nr": "92192"}, {"name": "Linnea Aune", "nr": "97751"}, {"name": "Vilde Roen", "nr": "95598"}, {"name": "Vegard Kvam", "nr": "95472"}, {"name": "Malin Holt", "nr": "97700"}, {"name": "Selma Myhre", "nr": "90067"}, {"name": "Sofie Myhre", "nr": "91710"}, {"name": "Nina Sæter", "nr": "96424"}, {"name": "Trygve Lunde", "nr": "92959"}, {"name": "Gustav Holt", "nr": "97904"}], "trappe": {"1.tur": {"Butikk": [[0, 21], [101, 21], [201, 21], [301, 21], [401, 21], [501, 21], [601, 21], [701, 21], [801, 22], [901, 23], [1001, 24], [1101, 26], [1201, 27], [1301, 29], [1401, 30], [1501, 31], [1601, 31], [1701, 31], [1801, 31], [1901, 31], [2000, 31], ["HS", 33]], "Restaurant": [[0, 17], [101, 17], [201, 17], [301, 17], [401, 17], [501, 18], [601, 18], [701, 19], [801, 20], [901, 21], [1001, 23], [1101, 23], [1201, 23], [1301, 23], [1401, 23], [1501, 23], [1601, 23], [1701, 23], [1801, 23], [1901, 23], [2000, 23], ["HS", 29]], "Bysse": [[0, 20], [101, 20], [201, 20], [301, 20], [401, 20], [501, 20], [601, 20], [701, 20], [801, 21], [901, 21], [1001, 22], [1101, 22], [1201, 23], [1301, 23], [1401, 23], [1501, 23], [1601, 24], [1701, 24], [1801, 24], [1901, 24], [2000, 24], ["HS", 28]], "Husøk": [[0, 7], [101, 7], [201, 7], [301, 7], [401, 7], [501, 7], [601, 7], [701, 7], [801, 7], [901, 7], [1001, 7], [1101, 7], [1201, 7], [1301, 7], [1401, 7], [1501, 7], [1601, 7], [1701, 7], [1801, 7], [1901, 7], [2000, 7], ["HS", 8]]}, "2.tur": {"Butikk": [[0, 16], [101, 16], [201, 16], [301, 16], [401, 16], [501, 16], [601, 16], [701, 20], [801, 22], [901, 23], [1001, 24], [1101, 25], [1201, 26], [1301, 27], [1401, 27], [1501, 28], [1601, 28], [1701, 28], [1801, 28], [1901, 28], [2000, 28], ["HS", 31]], "Restaurant": [[0, 14], [101, 14], [201, 14], [301, 15], [401, 16], [501, 18], [601, 20], [701, 22], [801, 22], [901, 22], [1001, 23], [1101, 23], [1201, 23], [1301, 23], [1401, 23], [1501, 23], [1601, 23], [1701, 23], [1801, 23], [1901, 23], [2000, 23], ["HS", 26]], "Bysse": [[0, 19], [101, 19], [201, 19], [301, 19], [401, 19], [501, 19], [601, 19], [701, 20], [801, 20], [901, 20], [1001, 21], [1101, 21], [1201, 22], [1301, 22], [1401, 22], [1501, 22], [1601, 23], [1701, 23], [1801, 23], [1901, 23], [2000, 23], ["HS", 27]], "Husøk": [[0, 7], [101, 7], [201, 7], [301, 7], [401, 7], [501, 7], [601, 7], [701, 7], [801, 7], [901, 7], [1001, 7], [1101, 7], [1201, 7], [1301, 7], [1401, 7], [1501, 7], [1601, 7], [1701, 7], [1801, 7], [1901, 7], [2000, 7], ["HS", 8]]}}, "week": [{"d": "Man", "dato": "13.10", "pax1": 420, "pax2": 380}, {"d": "Tir", "dato": "14.10", "pax1": 510, "pax2": 460}, {"d": "Ons", "dato": "15.10", "pax1": 640, "pax2": 600}, {"d": "Tor", "dato": "16.10", "pax1": 880, "pax2": 820}, {"d": "Fre", "dato": "17.10", "pax1": 1320, "pax2": 1180}, {"d": "Lør", "dato": "18.10", "pax1": 1680, "pax2": 1540}, {"d": "Søn", "dato": "19.10", "pax1": 1150, "pax2": 1020}], "absence": {"syk": [["Butikk Taxfree", "8419", 4], ["Butikk CS", "8315", 5], ["Proviant", "8307", 6]], "perm": [["Butikk Taxfree", "8303", 2]]}, "candidates": [{"name": "Randi Roen", "quals": ["butikksjef"]}, {"name": "Kari Dahl", "quals": ["butikksjef", "salgsleder"]}, {"name": "Guro Haugen", "quals": ["butikk", "extra"]}, {"name": "Haakon Nes", "quals": ["butikksjef"]}, {"name": "Haakon Vik", "quals": ["butikksjef", "salgsleder"]}, {"name": "Tiril Tangen", "quals": ["butikk", "extra"]}, {"name": "Emma Sand", "quals": ["butikk", "extra"]}, {"name": "Kari Gran", "quals": ["butikksjef", "salgsleder"]}, {"name": "Ida Berg", "quals": ["salgsleder"]}, {"name": "Magnus Foss", "quals": ["butikk", "extra"]}, {"name": "Julie Sand", "quals": ["butikk", "extra"]}, {"name": "Filip Nes", "quals": ["salgsleder"]}, {"name": "Hedda Aune", "quals": ["butikk", "extra"]}, {"name": "Live Lia", "quals": ["butikk", "extra"]}, {"name": "Frida Sand", "quals": ["butikk", "extra"]}, {"name": "Ronja Ruud", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Haakon Myhre", "quals": ["salgsleder"]}, {"name": "Marius Ness", "quals": ["butikk", "extra", "salgsleder"]}, {"name": "Aksel Roen", "quals": ["butikk", "extra"]}, {"name": "Leah Stordal", "quals": ["butikk", "extra", "salgsleder"]}, {"name": "Magnus Ryen", "quals": ["butikk", "extra", "salgsleder"]}, {"name": "Fredrik Lund", "quals": ["butikk", "extra"]}, {"name": "Halvard Lunde", "quals": ["butikk", "extra"]}, {"name": "Simen Holm", "quals": ["butikk", "extra", "salgsleder"]}, {"name": "Agnes Bakke", "quals": ["butikk", "extra"]}, {"name": "Kristian Dahl", "quals": ["butikk", "extra"]}, {"name": "Nina Opsahl", "quals": ["butikk", "extra", "salgsleder"]}, {"name": "Noah Holm", "quals": ["butikk", "extra"]}, {"name": "Oline Lund", "quals": ["butikk", "extra"]}, {"name": "Knut Andrè E. Throndsen", "quals": ["butikk", "extra", "salgsleder"]}, {"name": "Magnus Lie", "quals": ["butikk", "extra"]}, {"name": "Linnea Aune", "quals": ["butikk", "extra"]}, {"name": "Vilde Roen", "quals": ["butikk", "extra", "salgsleder"]}, {"name": "Vegard Kvam", "quals": ["butikk", "extra"]}, {"name": "Malin Holt", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Selma Myhre", "quals": ["butikk", "extra"]}, {"name": "Sofie Myhre", "quals": ["butikk", "extra"]}, {"name": "Nina Sæter", "quals": ["butikksjef"]}, {"name": "Trygve Lunde", "quals": ["butikk", "extra"]}, {"name": "Gustav Holt", "quals": ["butikk", "extra"]}, {"name": "Isak Viken", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Hanne Foss", "quals": ["butikk", "extra"]}, {"name": "Emma Lia", "quals": ["butikk", "extra"]}, {"name": "Odd Myhre", "quals": ["butikk", "extra"]}, {"name": "Amalie Bratland", "quals": ["butikk", "extra"]}, {"name": "Selma Ek", "quals": ["butikk", "extra"]}, {"name": "Ruben Fjell", "quals": ["butikk", "extra"]}, {"name": "Maja Viken", "quals": ["butikk", "extra"]}, {"name": "Pia Ness", "quals": ["butikk", "extra"]}, {"name": "Camilla Holt", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Oliver Solvang", "quals": ["butikk", "extra"]}, {"name": "Mia Dahl", "quals": ["butikk", "extra"]}, {"name": "Nina Dahl", "quals": ["butikk", "extra"]}, {"name": "Signe Sæter", "quals": ["butikk", "extra"]}, {"name": "Hanne Fjell", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Camilla Strand", "quals": ["butikk", "extra"]}, {"name": "Kristian Sand", "quals": ["butikk", "extra"]}, {"name": "Gustav Lunde", "quals": ["butikk", "extra"]}, {"name": "Sindre Ryen", "quals": ["butikk", "extra"]}, {"name": "Kari Rud", "quals": ["butikk", "extra"]}, {"name": "Tobias Opsahl", "quals": ["butikk", "extra"]}, {"name": "Jakob Foss", "quals": ["butikk", "extra"]}, {"name": "Elin Lunde", "quals": ["butikk", "extra"]}, {"name": "Eirik Lie", "quals": ["butikk", "extra"]}, {"name": "Ronja Aune", "quals": ["butikk", "extra"]}, {"name": "Jakob Sand", "quals": ["butikk", "extra"]}, {"name": "Gustav Rognlien", "quals": ["butikk", "extra"]}, {"name": "Johannes Lund", "quals": ["butikk", "extra"]}, {"name": "Camilla Ryen", "quals": ["butikk", "extra"]}, {"name": "Mikkel Lie", "quals": ["butikk", "extra"]}, {"name": "Bjorn Roen", "quals": ["butikk", "extra"]}, {"name": "Noah Berg", "quals": ["butikk", "extra"]}, {"name": "Siri Eide", "quals": ["extra"]}, {"name": "Mia Myhre", "quals": ["butikk", "extra"]}, {"name": "Mia Sæter", "quals": ["butikk", "extra"]}, {"name": "Vilde Lunde", "quals": ["butikk", "extra"]}, {"name": "Siri Lund", "quals": ["butikk", "extra"]}, {"name": "Randi Mork", "quals": ["extra"]}, {"name": "Simen Strand", "quals": ["butikk", "extra"]}, {"name": "Pia Vik", "quals": ["extra"]}, {"name": "Sara Ryen", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Sofie Sæter", "quals": ["butikk", "extra"]}, {"name": "Daniel Fjell", "quals": ["extra"]}, {"name": "Bjorn Kvam", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Simen Eide", "quals": ["butikk", "extra"]}, {"name": "Vilde Ruud", "quals": ["butikk", "extra"]}, {"name": "Camilla Haugen", "quals": ["butikk", "extra"]}, {"name": "Sverre Ek", "quals": ["extra"]}, {"name": "Emma Gran", "quals": ["butikk", "extra"]}, {"name": "Helene Rud", "quals": ["butikk", "extra"]}, {"name": "Signe Aune", "quals": ["butikk", "extra"]}, {"name": "Oliver Gran", "quals": ["butikk", "extra"]}, {"name": "Amalie Fossum", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Kristian Holt", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Jonas Rud", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Maria Rud", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Marius Ryen", "quals": ["butikk", "extra"]}, {"name": "Karl Henrik B. Nylèn", "quals": ["butikk", "extra"]}, {"name": "Mina Dahl", "quals": ["butikk", "extra"]}, {"name": "Ida Bakke", "quals": ["butikk", "extra"]}, {"name": "Hanne Vik", "quals": ["butikksjef", "extra"]}, {"name": "Ane Tangen", "quals": ["butikk", "extra"]}, {"name": "Vegard Sæter", "quals": ["butikk", "extra"]}, {"name": "Ane Sand", "quals": ["butikk", "extra"]}, {"name": "Kristian Rognlien", "quals": ["butikk", "extra"]}, {"name": "Henrik Bakke", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Arne Holm", "quals": ["butikksjef"]}, {"name": "Camilla Vik", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Oda Lunde", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Daniel Nes", "quals": ["butikk", "extra"]}, {"name": "Ruben Foss", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Hedda Sæter", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Oda Dahl", "quals": ["butikk", "extra"]}, {"name": "Filip Austad", "quals": ["extra"]}, {"name": "Johannes Roen", "quals": ["butikk", "extra"]}, {"name": "Bjorn Vik", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Mikkel Fjell", "quals": ["butikk", "extra"]}, {"name": "Sofie Rud", "quals": ["butikk", "butikksjef", "extra"]}, {"name": "Helene Solvang", "quals": ["butikk", "extra"]}, {"name": "Frida Tangen", "quals": ["butikk", "extra"]}, {"name": "Sara Austad", "quals": ["butikk", "extra"]}, {"name": "Ruben Gran", "quals": ["butikk", "extra"]}, {"name": "Theo Sand", "quals": ["butikk", "extra"]}, {"name": "Vegard Fjell", "quals": ["butikk", "extra"]}, {"name": "Jan Berg", "quals": ["butikk", "extra"]}, {"name": "Guro Opsahl", "quals": ["extra"]}, {"name": "Tiril Bakke", "quals": ["butikk", "extra"]}, {"name": "Oda Rud", "quals": ["butikk", "extra"]}, {"name": "Henrik Heia", "quals": ["extra"]}, {"name": "Daniel Viken", "quals": ["butikk", "extra"]}, {"name": "Ronja Ek", "quals": ["butikk", "extra"]}, {"name": "Adrian Mork", "quals": ["butikk", "extra"]}, {"name": "Simen Opsahl", "quals": ["butikk", "extra"]}, {"name": "Filip Fjell", "quals": ["butikk", "extra"]}, {"name": "Hedda Mork", "quals": ["extra"]}, {"name": "Bjorn Aune", "quals": ["butikk", "extra"]}, {"name": "Live Rud", "quals": ["butikk", "extra"]}, {"name": "Kari Austad", "quals": ["butikk", "extra"]}, {"name": "Fredrik Aune", "quals": ["butikk", "extra"]}, {"name": "Sindre Aune", "quals": ["butikk", "extra"]}, {"name": "Noah Holt", "quals": ["butikk", "extra"]}, {"name": "Nina Myhre", "quals": ["butikk", "extra"]}, {"name": "Oda Fjell", "quals": ["butikk", "extra"]}], "competency": {"Randi Roen": ["butikksjef"], "Kari Dahl": ["butikksjef", "salgsleder"], "Guro Haugen": ["butikk", "extra"], "Haakon Nes": ["butikksjef"], "Haakon Vik": ["butikksjef", "salgsleder"], "Tiril Tangen": ["butikk", "extra"], "Emma Sand": ["butikk", "extra"], "Kari Gran": ["butikksjef", "salgsleder"], "Ida Berg": ["salgsleder"], "Magnus Foss": ["butikk", "extra"], "Julie Sand": ["butikk", "extra"], "Filip Nes": ["salgsleder"], "Hedda Aune": ["butikk", "extra"], "Live Lia": ["butikk", "extra"], "Frida Sand": ["butikk", "extra"], "Ronja Ruud": ["butikk", "butikksjef", "extra"], "Haakon Myhre": ["salgsleder"], "Marius Ness": ["butikk", "extra", "salgsleder"], "Aksel Roen": ["butikk", "extra"], "Leah Stordal": ["butikk", "extra", "salgsleder"], "Magnus Ryen": ["butikk", "extra", "salgsleder"], "Fredrik Lund": ["butikk", "extra"], "Halvard Lunde": ["butikk", "extra"], "Simen Holm": ["butikk", "extra", "salgsleder"], "Agnes Bakke": ["butikk", "extra"], "Kristian Dahl": ["butikk", "extra"], "Nina Opsahl": ["butikk", "extra", "salgsleder"], "Noah Holm": ["butikk", "extra"], "Oline Lund": ["butikk", "extra"], "Knut Andrè E. Throndsen": ["butikk", "extra", "salgsleder"], "Magnus Lie": ["butikk", "extra"], "Linnea Aune": ["butikk", "extra"], "Vilde Roen": ["butikk", "extra", "salgsleder"], "Vegard Kvam": ["butikk", "extra"], "Malin Holt": ["butikk", "butikksjef", "extra"], "Selma Myhre": ["butikk", "extra"], "Sofie Myhre": ["butikk", "extra"], "Nina Sæter": ["butikksjef"], "Trygve Lunde": ["butikk", "extra"], "Gustav Holt": ["butikk", "extra"], "Isak Viken": ["butikk", "butikksjef", "extra"], "Hanne Foss": ["butikk", "extra"], "Emma Lia": ["butikk", "extra"], "Odd Myhre": ["butikk", "extra"], "Amalie Bratland": ["butikk", "extra"], "Selma Ek": ["butikk", "extra"], "Ruben Fjell": ["butikk", "extra"], "Maja Viken": ["butikk", "extra"], "Pia Ness": ["butikk", "extra"], "Camilla Holt": ["butikk", "butikksjef", "extra"], "Oliver Solvang": ["butikk", "extra"], "Mia Dahl": ["butikk", "extra"], "Nina Dahl": ["butikk", "extra"], "Signe Sæter": ["butikk", "extra"], "Hanne Fjell": ["butikk", "butikksjef", "extra"], "Camilla Strand": ["butikk", "extra"], "Kristian Sand": ["butikk", "extra"], "Gustav Lunde": ["butikk", "extra"], "Sindre Ryen": ["butikk", "extra"], "Kari Rud": ["butikk", "extra"], "Tobias Opsahl": ["butikk", "extra"], "Jakob Foss": ["butikk", "extra"], "Elin Lunde": ["butikk", "extra"], "Eirik Lie": ["butikk", "extra"], "Ronja Aune": ["butikk", "extra"], "Jakob Sand": ["butikk", "extra"], "Gustav Rognlien": ["butikk", "extra"], "Johannes Lund": ["butikk", "extra"], "Camilla Ryen": ["butikk", "extra"], "Mikkel Lie": ["butikk", "extra"], "Bjorn Roen": ["butikk", "extra"], "Noah Berg": ["butikk", "extra"], "Siri Eide": ["extra"], "Mia Myhre": ["butikk", "extra"], "Mia Sæter": ["butikk", "extra"], "Vilde Lunde": ["butikk", "extra"], "Siri Lund": ["butikk", "extra"], "Randi Mork": ["extra"], "Simen Strand": ["butikk", "extra"], "Pia Vik": ["extra"], "Sara Ryen": ["butikk", "butikksjef", "extra"], "Sofie Sæter": ["butikk", "extra"], "Daniel Fjell": ["extra"], "Bjorn Kvam": ["butikk", "butikksjef", "extra"], "Simen Eide": ["butikk", "extra"], "Vilde Ruud": ["butikk", "extra"], "Camilla Haugen": ["butikk", "extra"], "Sverre Ek": ["extra"], "Emma Gran": ["butikk", "extra"], "Helene Rud": ["butikk", "extra"], "Signe Aune": ["butikk", "extra"], "Oliver Gran": ["butikk", "extra"], "Amalie Fossum": ["butikk", "butikksjef", "extra"], "Kristian Holt": ["butikk", "butikksjef", "extra"], "Jonas Rud": ["butikk", "butikksjef", "extra"], "Maria Rud": ["butikk", "butikksjef", "extra"], "Marius Ryen": ["butikk", "extra"], "Karl Henrik B. Nylèn": ["butikk", "extra"], "Mina Dahl": ["butikk", "extra"], "Ida Bakke": ["butikk", "extra"], "Hanne Vik": ["butikksjef", "extra"], "Ane Tangen": ["butikk", "extra"], "Vegard Sæter": ["butikk", "extra"], "Ane Sand": ["butikk", "extra"], "Kristian Rognlien": ["butikk", "extra"], "Henrik Bakke": ["butikk", "butikksjef", "extra"], "Arne Holm": ["butikksjef"], "Camilla Vik": ["butikk", "butikksjef", "extra"], "Oda Lunde": ["butikk", "butikksjef", "extra"], "Daniel Nes": ["butikk", "extra"], "Ruben Foss": ["butikk", "butikksjef", "extra"], "Hedda Sæter": ["butikk", "butikksjef", "extra"], "Oda Dahl": ["butikk", "extra"], "Filip Austad": ["extra"], "Johannes Roen": ["butikk", "extra"], "Bjorn Vik": ["butikk", "butikksjef", "extra"], "Mikkel Fjell": ["butikk", "extra"], "Sofie Rud": ["butikk", "butikksjef", "extra"], "Helene Solvang": ["butikk", "extra"], "Frida Tangen": ["butikk", "extra"], "Sara Austad": ["butikk", "extra"], "Ruben Gran": ["butikk", "extra"], "Theo Sand": ["butikk", "extra"], "Vegard Fjell": ["butikk", "extra"], "Jan Berg": ["butikk", "extra"], "Guro Opsahl": ["extra"], "Tiril Bakke": ["butikk", "extra"], "Oda Rud": ["butikk", "extra"], "Henrik Heia": ["extra"], "Daniel Viken": ["butikk", "extra"], "Ronja Ek": ["butikk", "extra"], "Adrian Mork": ["butikk", "extra"], "Simen Opsahl": ["butikk", "extra"], "Filip Fjell": ["butikk", "extra"], "Hedda Mork": ["extra"], "Bjorn Aune": ["butikk", "extra"], "Live Rud": ["butikk", "extra"], "Kari Austad": ["butikk", "extra"], "Fredrik Aune": ["butikk", "extra"], "Sindre Aune": ["butikk", "extra"], "Noah Holt": ["butikk", "extra"], "Nina Myhre": ["butikk", "extra"], "Oda Fjell": ["butikk", "extra"]}, "dayrate": {"leder": 4200, "salgsleder": 3600, "fast": 3100, "deltid": 1700, "vikar": 2600}, "hvilebrudd": [{"poolIdx": 3, "dag": 4, "type_no": "Døgnhvile", "type_en": "Daily rest", "detail_no": "Kun 9t 20m hvile mellom kveldsvakt (fre) og morgenvakt (lør) — krav 11t.", "detail_en": "Only 9h 20m rest between evening shift (Fri) and morning shift (Sat) — req. 11h.", "sev": "hoy"}, {"poolIdx": 7, "dag": 5, "type_no": "Sammenhengende arbeid", "type_en": "Continuous work", "detail_no": "14t 45m sammenhengende arbeid lørdag ved høysesong-belegg — maks 14t.", "detail_en": "14h 45m continuous work on Saturday at peak occupancy — max 14h.", "sev": "hoy"}, {"poolIdx": 12, "dag": 6, "type_no": "Ukehvile", "type_en": "Weekly rest", "detail_no": "68t sammenhengende ukehvile i perioden — krav 77t etter tariff.", "detail_en": "68h continuous weekly rest in the period — req. 77h per agreement.", "sev": "mid"}, {"poolIdx": 5, "dag": 4, "type_no": "Vaktrotasjon", "type_en": "Shift rotation", "detail_no": "To sene kveldsvakter etterfulgt av tidlig morgen — effektiv hvile 8t 55m.", "detail_en": "Two late evening shifts followed by an early morning — effective rest 8h 55m.", "sev": "mid"}], "costreport": {"months_no": ["Mai", "Jun", "Jul", "Aug", "Sep", "Okt"], "months_en": ["May", "Jun", "Jul", "Aug", "Sep", "Oct"], "plan": [1180, 1460, 1890, 1920, 1320, 1240], "faktisk": [1210, 1520, 2010, 1980, 1360, 1290], "area_no": ["Butikk", "Restaurant", "Bysse", "Resepsjon"], "area_en": ["Shop", "Restaurant", "Galley", "Reception"], "areaCost": [2140, 3860, 2520, 1180], "weeks": ["36", "37", "38", "39", "40", "41", "42"], "overtimeWk": [42, 55, 61, 78, 93, 70, 58], "agencyShareWk": [6, 8, 7, 11, 14, 19, 12], "ytd": {"lonn": 11040, "vikar": 1320, "overtid": 880, "avvik": 4.6}}};
 const AREA = "Butikk";
 let state = { tur:"1.tur", day:4, hs:false, showAbs:true, qualOnly:true, assign:{},
   pax: DATA.week.map(w=>({1:w.pax1,2:w.pax2})) };
@@ -237,6 +335,29 @@ const STR = {
   mReq:"Krever kvalifikasjon:", avail:"tilgjengelig", rec:"★ anbefalt", recTitle:"Agentens anbefaling", cur:"(nåværende)",
   mBlocked:(n,q)=>`🔒 ${n} person(er) skjult — mangler kvalifikasjonen <b>${q}</b>. Appen tillater kun kvalifiserte som direkte erstatter.`,
   mNoGuard:"⚠️ Kvalifikasjonssperren er av — viser alle tilgjengelige. (I drift ville dette krevd dispensasjon.)",
+  pg:{
+    close:"Lukk", back:"← Tilbake til planen", mock:"Mock-data",
+    hvH:"Hviletid — avvik og compliance",
+    hvS:"Automatisk kontroll mot arbeids- og hviletidsregler (arbeidsmiljølov / sjøarbeidsregelverk). I drift leses faktisk arbeids- og hviletid fra SD Worx og timeregistrering.",
+    hvKpiTot:"Avvik totalt", hvKpiHoy:"Høy alvorlighet", hvKpiMid:"Middels", hvKpiChecked:"Vakter kontrollert",
+    hvCol:["Ansatt","Type","Avvik","Dag","Alvorlighet"],
+    sevHoy:"Høy", sevMid:"Middels",
+    hvNote:"Demodata. I drift ville agenten foreslått omrokkering eller ekstra hvile før vakten publiseres — og blokkert publisering ved høy alvorlighet, med sporbar begrunnelse.",
+    vkH:"Tilgjengelige vikarer — vikarpool",
+    vkS:"Kvalifiserte vikarer og ekstravakter som kan dekke udekkede roller (SHORT). Status, base og ledighet er illustrative.",
+    vkTot:"Tilgjengelige nå", vkPool:"Totalt i pool", vkQual:"Kvalifisert for Butikk", vkShort:"Udekket denne uka",
+    stAvail:"Tilgjengelig", stShift:"På vakt", stBusy:"Opptatt",
+    vkBase:"Base", vkFrom:"Ledig fra", vkPct:"stilling",
+    vkSend:"Send forespørsel", vkSent:"Forespørsel sendt ✓",
+    vkNote:"Demodata. I drift ville «Send forespørsel» varslet vikaren via Teams / Adaptive Card og oppdatert status automatisk når hen takker ja.",
+    koH:"Kostnad — styringsdashbord",
+    koS:"Bemanningskostnad mot budsjett, overtid og vikarbruk. Innebygd Power BI-rapport (mock-data).",
+    koKpiLonn:"Lønnskostnad hittil i år", koKpiVikar:"Vikarkostnad", koKpiOT:"Overtidskostnad", koKpiAvvik:"Avvik mot budsjett",
+    koT1:"Plan vs. faktisk lønnskostnad", koT2:"Kostnad per driftsområde", koT3:"Overtidstimer per uke", koT4:"Vikarandel av bemanning",
+    koPlan:"Plan", koFaktisk:"Faktisk", koUnit:"kNOK/mnd", koUnitYtd:"kNOK hittil i år", koHours:"timer", koPct:"%", koWeek:"Uke",
+    koChips:["Skip: Color Hybrid","Periode: Hittil i år","Avdeling: Alle"],
+    koNote:"Demodata. I drift ville dette vært en innebygd Power BI-rapport mot Dataverse / Microsoft Fabric, med drill-through per avdeling, skip og periode, og marginalkostnad per PAX-trinn.",
+  },
   ag:{
     prognose:["Prognose-agent","PAX",(hs,pax,tur)=>`Forventet belegg for valgt dag: <b>${hs?"Høysesong":pax+" passasjerer"}</b> på ${tur}.`],
     trappe:["Trappebemanning-agent","Behov",(behov,paxTxt)=>`Trappen gir <b>${behov}</b> hoder i Butikk ved ${paxTxt}. Terskler er ikke-lineære — behovet flater ut i toppen.`],
@@ -264,6 +385,29 @@ const STR = {
   mReq:"Requires qualification:", avail:"available", rec:"★ recommended", recTitle:"Agent recommendation", cur:"(current)",
   mBlocked:(n,q)=>`🔒 ${n} person(s) hidden — lacking the qualification <b>${q}</b>. The app allows only qualified staff as direct replacement.`,
   mNoGuard:"⚠️ The qualification guard is off — showing all available. (In operation this would require an exemption.)",
+  pg:{
+    close:"Close", back:"← Back to the plan", mock:"Mock data",
+    hvH:"Rest hours — breaches and compliance",
+    hvS:"Automatic check against working- and rest-time rules (working environment / maritime labour). In operation, actual working and rest hours are read from SD Worx and time registration.",
+    hvKpiTot:"Breaches total", hvKpiHoy:"High severity", hvKpiMid:"Medium", hvKpiChecked:"Shifts checked",
+    hvCol:["Employee","Type","Breach","Day","Severity"],
+    sevHoy:"High", sevMid:"Medium",
+    hvNote:"Demo data. In operation the agent would propose reshuffling or extra rest before the shift is published — and block publishing at high severity, with a traceable justification.",
+    vkH:"Available agency staff — substitute pool",
+    vkS:"Qualified agency and extra staff who can cover uncovered roles (SHORT). Status, base and availability are illustrative.",
+    vkTot:"Available now", vkPool:"Total in pool", vkQual:"Qualified for Shop", vkShort:"Uncovered this week",
+    stAvail:"Available", stShift:"On shift", stBusy:"Busy",
+    vkBase:"Base", vkFrom:"Free from", vkPct:"position",
+    vkSend:"Send request", vkSent:"Request sent ✓",
+    vkNote:"Demo data. In operation, 'Send request' would notify the substitute via Teams / Adaptive Card and update status automatically once they accept.",
+    koH:"Cost — management dashboard",
+    koS:"Staffing cost vs budget, overtime and agency usage. Embedded Power BI report (mock data).",
+    koKpiLonn:"Payroll cost year-to-date", koKpiVikar:"Agency cost", koKpiOT:"Overtime cost", koKpiAvvik:"Variance vs budget",
+    koT1:"Plan vs. actual payroll cost", koT2:"Cost per operating area", koT3:"Overtime hours per week", koT4:"Agency share of staffing",
+    koPlan:"Plan", koFaktisk:"Actual", koUnit:"kNOK/mo", koUnitYtd:"kNOK year-to-date", koHours:"hours", koPct:"%", koWeek:"Week",
+    koChips:["Ship: Color Hybrid","Period: Year-to-date","Department: All"],
+    koNote:"Demo data. In operation this would be an embedded Power BI report over Dataverse / Microsoft Fabric, with drill-through per department, ship and period, and marginal cost per PAX step.",
+  },
   ag:{
     prognose:["Forecast agent","PAX",(hs,pax,tur)=>`Expected occupancy for the selected day: <b>${hs?"High season":pax+" passengers"}</b> on ${tur}.`],
     trappe:["Staircase agent","Need",(behov,paxTxt)=>`The staircase gives <b>${behov}</b> heads in Shop at ${paxTxt}. Thresholds are non-linear — the need flattens at the top.`],
@@ -430,10 +574,13 @@ function render(){
   renderAgents({tur,pax,behov,available,gap,sykN,permN,costVikar});
 }
 
-function agentCard(color,name,tag,tagcls,msg){
-  return `<div class="agent" style="border-left-color:${color}">
+function agentCard(color,name,tag,tagcls,msg,page,goLabel){
+  const cl = page? " clickable":"";
+  const da = page? ` data-page="${page}"`:"";
+  const go = page? `<div class="go">${goLabel} →</div>`:"";
+  return `<div class="agent${cl}" style="border-left-color:${color}"${da}>
     <div class="nm">${name}<span class="tag ${tagcls}">${tag}</span></div>
-    <div class="msg">${msg}</div></div>`;
+    <div class="msg">${msg}</div>${go}</div>`;
 }
 function renderAgents(x){
   const A = STR[lang].ag;
@@ -442,17 +589,26 @@ function renderAgents(x){
   const vikarNames = DATA.pool.filter(p=>!assignedNames.has(p.name)).slice(0,Math.max(0,x.gap)).map(p=>p.name).join(", ");
   const krLocale = lang==="no"? "no-NO":"en-GB";
   const el=document.getElementById("agents");
+  const hvN=(DATA.hvilebrudd||[]).length;
+  const hvHoy=(DATA.hvilebrudd||[]).filter(b=>b.sev==="hoy").length;
+  const go = lang==="no"
+    ? {hv:"Se avvik", vk:"Åpne vikarpool", ko:"Åpne kostnadsdashbord"}
+    : {hv:"View breaches", vk:"Open agency pool", ko:"Open cost dashboard"};
+  const hvMsg = lang==="no"
+    ? `<b>${hvN} avvik</b> på hvile-/arbeidstid oppdaget (${hvHoy} høy alvorlighet). Klikk for detaljer. (Mock — kobles mot SD Worx.)`
+    : `<b>${hvN} breaches</b> on rest/working time detected (${hvHoy} high severity). Click for details. (Mock — connects to SD Worx.)`;
+  const hvTag = hvN+(lang==="no"?" avvik":" breaches");
   el.innerHTML =
     agentCard("#00A4EF",A.prognose[0],A.prognose[1],"t-info", A.prognose[2](state.hs,x.pax,turLabel(x.tur)))
   + agentCard("#0078D4",A.trappe[0],A.trappe[1],"t-info", A.trappe[2](x.behov,paxTxt))
   + agentCard("#D13438",A.sikkerhet[0],A.sikkerhet[1],"t-ok", A.sikkerhet[2])
   + agentCard("#107C10",A.kvalNm, x.gap>0?A.tagSjekk:A.tagOk, x.gap>0?"t-warn":"t-ok",
       x.gap>0? A.kvalGap(x.gap,vikarNames) : A.kvalOk)
-  + agentCard("#F7A600",A.hviletid[0],A.hviletid[1],"t-ok", A.hviletid[2])
+  + agentCard("#F7A600",A.hviletid[0], hvTag, hvN>0?"t-warn":"t-ok", hvMsg, "pgHvile", go.hv)
   + agentCard("#00A4EF",A.tilgjNm, (x.sykN+x.permN)>0?A.tagFravaer:A.tagOk, (x.sykN+x.permN)>0?"t-warn":"t-ok",
-      (x.sykN+x.permN)>0? A.tilgjGap(x.sykN,x.permN,DATA.pool.length) : A.tilgjOk)
+      (x.sykN+x.permN)>0? A.tilgjGap(x.sykN,x.permN,DATA.pool.length) : A.tilgjOk, "pgVikar", go.vk)
   + agentCard("#605E5C",A.kostNm, x.gap>0?A.tagKr:A.tagBudsjett, x.gap>0?"t-warn":"t-ok",
-      x.gap>0? A.kostGap(x.gap, x.costVikar.toLocaleString(krLocale)) : A.kostOk);
+      x.gap>0? A.kostGap(x.gap, x.costVikar.toLocaleString(krLocale)) : A.kostOk, "pgKost", go.ko);
 }
 
 // ---- qualified-replacement picker ----
@@ -537,6 +693,130 @@ function sync(){
   document.getElementById("paxRange").value=pax;
 }
 
+// ---- drill-down pages (hviletid / vikar / kostnad) ----
+function openPage(id){ renderPage(id); document.getElementById(id).classList.add("on"); }
+function closePage(id){ document.getElementById(id).classList.remove("on"); }
+function renderPage(id){ if(id==="pgHvile") renderHvile(); else if(id==="pgVikar") renderVikar(); else if(id==="pgKost") renderKost(); }
+function refreshOpenPages(){ document.querySelectorAll(".pageovl.on").forEach(o=>renderPage(o.id)); }
+function dayLabel(i){ return DAYNAMES[lang][i]+" "+DATA.week[i].dato; }
+function poolName(i){ const p=DATA.pool[i]; return p? p.name : "—"; }
+
+function renderHvile(){
+  const P=STR[lang].pg;
+  document.getElementById("hvH").textContent=P.hvH;
+  document.getElementById("hvS").textContent=P.hvS;
+  document.getElementById("hvMock").textContent=P.mock;
+  const br=DATA.hvilebrudd||[];
+  const hoy=br.filter(b=>b.sev==="hoy").length, mid=br.length-hoy;
+  const rows=br.map(b=>{
+    const typ=lang==="no"?b.type_no:b.type_en;
+    const det=lang==="no"?b.detail_no:b.detail_en;
+    const sv=b.sev==="hoy"?`<span class="sev hoy">${P.sevHoy}</span>`:`<span class="sev mid">${P.sevMid}</span>`;
+    return `<tr><td class="hn">${poolName(b.poolIdx)}</td><td>${typ}</td><td>${det}</td><td>${dayLabel(b.dag)}</td><td>${sv}</td></tr>`;
+  }).join("");
+  document.getElementById("hvBody").innerHTML=`
+    <div class="bikpis">
+      <div class="bikpi"><div class="n" style="color:var(--red)">${br.length}</div><div class="l">${P.hvKpiTot}</div></div>
+      <div class="bikpi"><div class="n" style="color:var(--red)">${hoy}</div><div class="l">${P.hvKpiHoy}</div></div>
+      <div class="bikpi"><div class="n" style="color:#8A6100">${mid}</div><div class="l">${P.hvKpiMid}</div></div>
+      <div class="bikpi"><div class="n" style="color:var(--green)">126</div><div class="l">${P.hvKpiChecked}</div></div>
+    </div>
+    <div class="tile"><table class="hvtbl"><thead><tr>${P.hvCol.map(c=>`<th>${c}</th>`).join("")}</tr></thead><tbody>${rows}</tbody></table></div>
+    <div class="pnote">${P.hvNote}</div>`;
+}
+
+function renderVikar(){
+  const P=STR[lang].pg;
+  document.getElementById("vkH").textContent=P.vkH;
+  document.getElementById("vkS").textContent=P.vkS;
+  document.getElementById("vkMock").textContent=P.mock;
+  const assigned=new Set();
+  DATA.positions.forEach(p=>{ if(p.sample&&p.sample.name) assigned.add(p.sample.name); });
+  Object.values(state.assign).forEach(n=>{ if(n) assigned.add(n); });
+  const bases=["Oslo","Kiel","Larvik","Hirtshals","Sandefjord"];
+  const statuses=[["av",P.stAvail],["av",P.stAvail],["sh",P.stShift],["av",P.stAvail],["bz",P.stBusy]];
+  const subs=DATA.pool.map((p,i)=>{
+    const c=CAND.find(x=>x.name===p.name);
+    const quals=c? c.quals : [];
+    const st=statuses[i%statuses.length];
+    return {name:p.name,quals,stCls:st[0],stTx:st[1],pct:[100,80,60,50,40][i%5],base:bases[i%bases.length],from:DATA.week[i%7].dato,
+      qualShop:quals.includes("butikk")||quals.includes("salgsleder")||quals.includes("butikksjef")};
+  }).filter(s=>!assigned.has(s.name));
+  const availN=subs.filter(s=>s.stCls==="av").length;
+  const qualN=subs.filter(s=>s.qualShop).length;
+  subs.sort((a,b)=>((a.stCls==="av"?0:1)-(b.stCls==="av"?0:1)) || ((b.qualShop?1:0)-(a.qualShop?1:0)));
+  const cards=subs.slice(0,8).map((s,i)=>{
+    const ql=s.quals.map(q=>qlab(q)).join(", ")||"—";
+    const dis=s.stCls!=="av";
+    return `<div class="vikcard">
+      <div class="vt"><div><div class="vn">${s.name}</div><div class="vq">${ql}</div></div><span class="vstat ${s.stCls}">${s.stTx}</span></div>
+      <div class="vmeta"><span><b>${s.pct}%</b> ${P.vkPct}</span><span>${P.vkBase}: <b>${s.base}</b></span><span>${P.vkFrom}: <b>${s.from}</b></span></div>
+      <button class="vsend" data-send="1" ${dis?'disabled style="opacity:.45;cursor:not-allowed"':''}>${P.vkSend}</button>
+    </div>`;
+  }).join("");
+  document.getElementById("vkBody").innerHTML=`
+    <div class="bikpis">
+      <div class="bikpi"><div class="n" style="color:var(--green)">${availN}</div><div class="l">${P.vkTot}</div></div>
+      <div class="bikpi"><div class="n">${DATA.pool.length}</div><div class="l">${P.vkPool}</div></div>
+      <div class="bikpi"><div class="n">${qualN}</div><div class="l">${P.vkQual}</div></div>
+      <div class="bikpi"><div class="n" style="color:var(--red)">4</div><div class="l">${P.vkShort}</div></div>
+    </div>
+    <div class="vikgrid">${cards}</div>
+    <div class="pnote">${P.vkNote}</div>`;
+  document.querySelectorAll('#vkBody .vsend').forEach(b=>{ if(b.disabled) return; b.onclick=()=>{ b.classList.add("sent"); b.textContent=P.vkSent; }; });
+}
+
+function renderKost(){
+  const P=STR[lang].pg, C=DATA.costreport;
+  document.getElementById("koH").textContent=P.koH;
+  document.getElementById("koS").textContent=P.koS;
+  document.getElementById("koPbi").textContent="▦ Power BI";
+  document.getElementById("koMock").textContent=P.mock;
+  const months=lang==="no"?C.months_no:C.months_en;
+  const areas=lang==="no"?C.area_no:C.area_en;
+  const loc=lang==="no"?"no-NO":"en-GB";
+  const maxPA=Math.max.apply(null,C.plan.concat(C.faktisk));
+  const planFakt=months.map((m,i)=>`
+    <div class="vbg"><div class="vbpair">
+      <div class="vb plan" style="height:${Math.round(C.plan[i]/maxPA*100)}%" title="${P.koPlan}: ${C.plan[i]}"></div>
+      <div class="vb fakt" style="height:${Math.round(C.faktisk[i]/maxPA*100)}%" title="${P.koFaktisk}: ${C.faktisk[i]}"></div>
+    </div><div class="vbx">${m}</div></div>`).join("");
+  const maxArea=Math.max.apply(null,C.areaCost);
+  const areaBars=areas.map((a,i)=>`
+    <div class="hbar"><div class="hl"><span>${a}</span><b>${C.areaCost[i].toLocaleString(loc)}</b></div>
+    <div class="ht"><div class="hf" style="width:${Math.round(C.areaCost[i]/maxArea*100)}%"></div></div></div>`).join("");
+  const maxOT=Math.max.apply(null,C.overtimeWk);
+  const otBars=C.weeks.map((w,i)=>`<div class="vbg"><div class="vbpair"><div class="vbsingle amb" style="height:${Math.round(C.overtimeWk[i]/maxOT*100)}%" title="${C.overtimeWk[i]} ${P.koHours}"></div></div><div class="vbx">${w}</div></div>`).join("");
+  const maxAg=Math.max.apply(null,C.agencyShareWk);
+  const agBars=C.weeks.map((w,i)=>`<div class="vbg"><div class="vbpair"><div class="vbsingle cy" style="height:${Math.round(C.agencyShareWk[i]/maxAg*100)}%" title="${C.agencyShareWk[i]}%"></div></div><div class="vbx">${w}</div></div>`).join("");
+  const y=C.ytd;
+  document.getElementById("koBody").innerHTML=`
+    <div class="chips">${P.koChips.map((c,i)=>`<span class="chip${i===0?' on':''}">${c}</span>`).join("")}</div>
+    <div class="bikpis">
+      <div class="bikpi"><div class="n">${y.lonn.toLocaleString(loc)}</div><div class="l">${P.koKpiLonn} · kNOK</div></div>
+      <div class="bikpi"><div class="n">${y.vikar.toLocaleString(loc)}</div><div class="l">${P.koKpiVikar} · kNOK</div></div>
+      <div class="bikpi"><div class="n">${y.overtid.toLocaleString(loc)}</div><div class="l">${P.koKpiOT} · kNOK</div></div>
+      <div class="bikpi"><div class="n" style="color:var(--red)">+${y.avvik}%</div><div class="l">${P.koKpiAvvik}</div><div class="d up">▲ ${P.koFaktisk} &gt; ${P.koPlan}</div></div>
+    </div>
+    <div class="bigrid">
+      <div class="tile"><h3>${P.koT1}<span class="mini">${P.koUnit}</span></h3><div class="vbars">${planFakt}</div>
+        <div class="lgnd"><span><i style="background:#C7E0F4"></i>${P.koPlan}</span><span><i style="background:var(--blue)"></i>${P.koFaktisk}</span></div></div>
+      <div class="tile"><h3>${P.koT2}<span class="mini">${P.koUnitYtd}</span></h3>${areaBars}</div>
+      <div class="tile"><h3>${P.koT3}<span class="mini">${P.koHours}</span></h3><div class="vbars">${otBars}</div><div class="lgnd"><span>${P.koWeek} 36–42</span></div></div>
+      <div class="tile"><h3>${P.koT4}<span class="mini">${P.koPct}</span></h3><div class="vbars">${agBars}</div><div class="lgnd"><span>${P.koWeek} 36–42</span></div></div>
+    </div>
+    <div class="pnote">${P.koNote}</div>`;
+}
+
+// page open/close wiring
+document.getElementById("agents").addEventListener("click",e=>{
+  const card=e.target.closest(".agent.clickable"); if(!card) return;
+  const pg=card.getAttribute("data-page"); if(pg) openPage(pg);
+});
+document.querySelectorAll(".pclose").forEach(b=>b.onclick=()=>closePage(b.getAttribute("data-close")));
+document.querySelectorAll(".pageovl").forEach(o=>o.addEventListener("click",e=>{ if(e.target===o) o.classList.remove("on"); }));
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") document.querySelectorAll(".pageovl.on,.ovl.on").forEach(x=>x.classList.remove("on")); });
+
 // events
 document.querySelectorAll("#turSeg button").forEach(b=>b.onclick=()=>{
   document.querySelectorAll("#turSeg button").forEach(x=>x.classList.remove("on"));
@@ -550,7 +830,7 @@ document.getElementById("paxRange").oninput=e=>{
   state.hs=false; document.getElementById("hsChk").checked=false; render();
 };
 // language + theme
-document.querySelectorAll("#langSeg button").forEach(b=>b.onclick=()=>switchLang(b.dataset.lang));
+document.querySelectorAll("#langSeg button").forEach(b=>b.onclick=()=>{switchLang(b.dataset.lang); refreshOpenPages();});
 document.getElementById("themeBtn").onclick=toggleTheme;
 
 applyStatic();
